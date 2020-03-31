@@ -1,0 +1,113 @@
+@font-face{
+	font-family: 'Segoe Script';
+	src: url('/fonts/segoesc.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Libertine Regular';
+	src: url('/fonts/LinBiolinum_Rah.TTF');
+	font-weight: normal;
+	font-style: normal;}
+
+
+@font-face {
+	font-family: 'Libertine Bold';
+	src: url('/fonts/LinBiolinum_RBah.TTF');
+	font-weight: normal;
+	font-style: normal;}
+
+@media only screen and (max-width: 768px) {}
+
+body{
+    font-family: 'Libertine Regular';
+    font-size: 19px;
+    color: black;
+    background-color: beige;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Libertine Bold';
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+a:hover{
+    color: grey;
+}
+
+
+header{
+    background-color: black;
+    color: white;
+    position: fixed;
+    padding-top: 0px;
+    margin-top: -10px;
+    margin-left: -8px;
+    height: 85px;
+    width: 105%;
+    z-index: 1;
+}
+.header_title_box{
+    position: fixed;
+    margin-left: 10%;
+    height: 85px;
+    vertical-align: -webkit-baseline-middle;
+    
+}
+.header_action_box{
+    margin-top: 45px;
+    margin-right: 10%;
+    height: 85px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;    
+}
+
+.actions {
+    color:white;
+    font-size: 16px;
+    text-align: right;
+}
+
+.page_nfo{
+    position: absolute;
+    margin-top: 76px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 89%;
+
+}
+.logo_img{
+    vertical-align: -webkit-baseline-middle;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.main_nfo{
+    font-family: 'Segoe Script';
+    font-size: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sub_nfo{
+    font-family: 'Segoe Script';
+    font-size: 18px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+
+
+
+

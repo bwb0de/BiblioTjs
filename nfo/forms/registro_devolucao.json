@@ -1,0 +1,23 @@
+{
+	"titulo": "Registrar devolução",
+	"descricao": "",
+	"form_ref": "registro_devolucao/no_id",
+	"campos": [{
+					"id" : "ID",
+					"visivel" : true,
+					"nome" : "ID",
+					"etiqueta" : "ID da mídia emprestada",
+					"tipo" : "text",
+					"dica" : "Registrar aqui o código identificador etiquetado na mídia.",
+					"ops" : null
+				},
+				{
+					"id" : "DTD",
+					"visivel" : true,
+					"nome" : "DTD",
+					"etiqueta" : "Data de devolução",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				}]
+}

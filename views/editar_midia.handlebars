@@ -1,0 +1,73 @@
+<div style="width: 80%; margin-top: -100px;">
+
+<form id="formulario_corrente" nome="formulario_corrente" action="/processar_formulario/atualizar_nfo/{{midia.ID}}" method="POST">
+    <input type="hidden" name="_csrf" value="CSRF token here">
+    <h2>Editar mídia</h2>
+    <div class="w3-row-padding">
+            <div class="w3-col s4">
+                <label for="ID" class="control-label"><b>Midia ID:</b>
+                <div>
+                    <input type="text" id="ID" name="ID" value="{{midia.ID}}" hidden>
+                    <input type="text" class="w3-input" id="ID_SHOW" name="ID_SHOW" value="{{midia.ID}}" disabled>
+                </div></label>
+            </div>
+
+            <div class="w3-col s4">
+                <label for="TITULO" class="control-label"><b>Titulo da mídia:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="TITULO" name="TITULO" placeholder="" value="{{midia.TITULO}}"></label>
+            </div> 
+
+            <div class="w3-col s4">
+                <label for="AUTOR" class="control-label"><b>Autor:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="AUTOR" name="AUTOR" placeholder="" value="{{midia.AUTOR}}"></label>
+            </div> 
+
+            <div class="w3-col s4">
+                <label for="AUTORESP" class="control-label"><b>Autor espiritual:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="AUTORESP" name="AUTORESP" placeholder="Inserir informações neste campo se for aplicável." value="{{midia.AUTORESP}}"></label>
+            </div> 
+
+            <div class="w3-col s4">
+                <label for="GN" class="control-label"><b>Genero da obra:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="GN" name="GN" placeholder="Drama, romance, comédia..." value="{{midia.GN}}"></label>
+            </div> 
+
+            <div class="w3-col s4">
+                <label for="EDITORA" class="control-label"><b>Editora/Gravadora:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="EDITORA" name="EDITORA" placeholder="" value="{{midia.EDITORA}}"></label>
+            </div> 
+
+            <div class="w3-col s4">
+                <label for="EDICAO" class="control-label"><b>Edição/Versão:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="EDICAO" name="EDICAO" placeholder="" value="{{midia.EDICAO}}"></label>
+            </div> 
+
+            <div class="w3-col s4">
+                <label for="KEYWORD" class="control-label"><b>Palavras-chave:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="KEYWORD" name="KEYWORD" placeholder="" value="{{midia.KEYWORD}}"></label>
+            </div> 
+
+            <div class="w3-col s12">
+            <label for="MIDIA" class="control-label"><b>
+                Tipo de mídia:</b></label></div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA0" name="MIDIA" value="Livro"{{#if midia.isLivro}} checked="checked"{{/if}}>Livro</div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA1" name="MIDIA" value="Revista"{{#if midia.isRevista}} checked="checked"{{/if}}>Revista</div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA2" name="MIDIA" value="Fita VHS"{{#if midia.isVHS}} checked="checked"{{/if}}>Fita VHS</div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA3" name="MIDIA" value="CD"{{#if midia.isCD}} checked="checked"{{/if}}>CD</div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA4" name="MIDIA" value="CD-ROM"{{#if midia.isCDR}} checked="checked"{{/if}}>CD-ROM</div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA5" name="MIDIA" value="DVD"{{#if midia.isDVD}} checked="checked"{{/if}}>DVD</div>
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="MIDIA6" name="MIDIA" value="BlueRay"{{#if midia.isBR}} checked="checked"{{/if}}>BlueRay</div>
+
+            <div class="w3-col s12">
+            <label for="RESUMO" class="control-label"><b>
+                Resumo/Resenha:</b></label>
+                <div style="margin-left: -11px; width: 100%">
+                    <textarea id="RESUMO" name="RESUMO" class="w3-input w3-border" style="margin-left: 13px; width: 100%; height: 200px;">{{midia.RESUMO}}</textarea>
+                </div>
+            </div>
+
+    </div><br>
+    <div class="w3-center"><button type="submit" class="w3-button w3-black">Registrar</button></div>
+</form>
+</div>
+

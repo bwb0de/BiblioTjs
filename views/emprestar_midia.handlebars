@@ -1,0 +1,24 @@
+<div style="width: 80%; margin-top: -100px;">
+<form id="formulario_corrente" nome="formulario_corrente" action="/processar_formulario/registro_emprestimo/{{midia.ID}}" method="POST">
+    <input type="hidden" name="_csrf" value="CSRF token here">
+    <h2>Registrar empréstimo</h2>
+    <div class="w3-row-padding">
+
+            <div class="w3-col s4">
+                <label for="ID" class="control-label"><b>ID da mídia emprestada:</b>
+                    <input type="text" class="w3-input w3-border s3" id="ID" name="ID" value="{{midia.ID}}" placeholder="Registrar aqui o código identificador etiquetado na mídia."></label>
+            </div> <!-- End of form-group -->
+
+            <div class="w3-col s4">
+                <label for="DTE" class="control-label"><b>Data de empréstimo:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="DTE" name="DTE" value="{{midia.DTE}}" placeholder=""></label>
+            </div> <!-- End of form-group -->
+
+            <div class="w3-col s4">
+                <label for="NOME_EMP" class="control-label"><b>Nome da pessoa:</b>
+                    <input  type="text" class="w3-input w3-border s3" id="NOME_EMP" name="NOME_EMP" value="{{midia.NOME_EMP}}" placeholder=""></label>
+            </div> <!-- End of form-group -->
+    </div><br>
+    <div class="w3-center"><button type="submit" class="w3-button w3-black">Registrar</button></div>
+</form>
+</div>

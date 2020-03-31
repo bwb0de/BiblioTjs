@@ -1,0 +1,66 @@
+<div style="width: 80%; margin-top: -100px;">
+<a href="/editar_midia/{{midia.ID}}"><img src="/img/edit.svg" width="40" height="40"></a>
+<a href="/emprestar_midia/{{midia.ID}}"><img src="/img/hand-holding-up-a-book.svg" width="40" height="40"></a>
+<h2>Informações detalhadas da mídia</h2>
+<table style="width: 70%">
+    <tr style="font-size: 22px;">
+        <td style="width: 250px; text-align: right; font-weight: bold;">Título:</td>
+        <td>{{midia.TITULO}} (<i>{{midia.ID}}</i>)</td>
+    </tr>
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Autor ou ator principal:</td>
+        <td>{{midia.AUTOR}}</td>
+    </tr>
+    {{#if midia.AUTORESP}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Autor espiritual:</td>
+        <td>{{midia.AUTORESP}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.GN}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Gênero:</td>
+        <td>{{midia.GN}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.EDITORA}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Editora:</td>
+        <td>{{midia.EDITORA}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.EDICAO}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Edição:</td>
+        <td>{{midia.EDICAO}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.KEYWORD}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Palavras chave:</td>
+        <td>{{midia.KEYWORD}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.RESUMO}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;">Resumo/detalhes:</td>
+        <td>{{midia.RESUMO}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.HISTORICO}}
+    <tr>
+        <td style="text-align: right; font-weight: bold;" valign="top"><b>Histórico de empréstimos:</b></td>
+        <td>{{midia.HISTORICO}}</td>
+    </tr>
+    {{/if}}
+    {{#if midia.NOME_EMP}}
+    <tr style="color: rgb(173, 23, 23); font-size: 22px;">
+        <td style="text-align: right; font-weight: bold;">Situação:</td>
+        <td>Emprestado para {{midia.NOME_EMP}}</td>
+    </tr>
+    {{/if}}
+</table><br><br>
+
+<div style="margin-left: 250px;">
+    <button onclick="location.href='/apagar/{{midia.ID}}'" type="button" class="w3-button w3-red">Apagar mídia</button>
+</div>

@@ -1,0 +1,32 @@
+{
+	"titulo": "Registrar empréstimo",
+	"descricao": "",
+	"form_ref": "registro_emprestimo/no_id",
+	"campos": [{
+					"id" : "ID",
+					"visivel" : true,
+					"nome" : "ID",
+					"etiqueta" : "ID da mídia emprestada",
+					"tipo" : "text",
+					"dica" : "Registrar aqui o código identificador etiquetado na mídia.",
+					"ops" : null
+				},
+				{
+					"id" : "DTE",
+					"visivel" : true,
+					"nome" : "DTE",
+					"etiqueta" : "Data de empréstimo",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				},
+				{
+					"id" : "NOME_EMP",
+					"visivel" : true,
+					"nome" : "NOME_EMP",
+					"etiqueta" : "Nome da pessoa",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				}]
+}

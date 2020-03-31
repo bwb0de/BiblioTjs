@@ -1,0 +1,127 @@
+<div style="width: 80%; margin-top: -100px;">
+<script>
+    lista_ids_registrados = "{{{ids}}}";
+</script>
+
+<form id="formulario_corrente" nome="formulario_corrente" action="/processar_formulario/{{form_ref}}" method="POST">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    
+    <h2>{{titulo}}</h2>
+        {{#if descricao}}{{else}}<p>{{descricao}}</p>{{/if}}
+
+    <div class="w3-row-padding">
+	{{#each campos}}
+        {{#if this.isSubt1}}
+                <h3>{{this.nfo}}</h3>
+        {{/if}}
+
+        {{#if this.isSubt2}}
+                <h4>{{this.nfo}}</h4>
+        {{/if}}
+
+        {{#if this.isTextarea}}
+            <div class="w3-col s12">
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label>
+                <div style="margin-left: -11px; width: 100%">
+                    <textarea id="{{this.id}}" name="{{this.nome}}" class="w3-input w3-border" style="margin-left: 13px; width: 100%; height: 200px;"></textarea>
+                </div>
+            </div> <!-- End of form-group -->
+        {{/if}}
+
+        {{#if this.isRadioText}}
+            <div>
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label>
+                <div>
+                    {{#each this.options}}
+                        <input style="width:25px;" type="radio" class="form-control" id="{{this.item_id}}" name="{{this.item_nome}}" value="{{this.item_val}}"><div style="margin-top: -20px; margin-left: 25px;">{{this.item_val}}</div>
+                    {{/each}}
+                </div>
+                <div>
+                    <input type="{{this.tipo}}" class="form-control" id="{{this.id}}" name="{{this.nome}}" placeholder="{{this.dica}}">
+                </div>
+            </div> <!-- End of form-group -->
+        {{/if}}
+
+        {{#if this.isEscala}}
+            <div>
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label>
+                <div>
+                    {{#each this.options}}
+                        <input style="width:25px;" type="radio" class="" id="{{this.item_id}}" name="{{this.item_nome}}" value="{{this.item_val}}">{{this.item_val}} 
+                    {{/each}}
+                </div>
+            </div> <!-- End of form-group -->
+        {{/if}}
+
+        {{#if this.isRadio}}
+            <div class="w3-col s12">
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label></div>
+            {{#each this.options}}
+                <div class="w3-col s1"><input style="width:25px;" type="radio" class="w3-radio" id="{{this.item_id}}" name="{{this.item_nome}}" value="{{this.item_val}}">{{this.item_val}}</div>
+            {{/each}}
+        {{/if}}
+
+        {{#if this.isCheckbox}}
+            <div>
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label>
+                <div>
+                    {{#each this.options}}
+                        <input style="width:25px;" type="checkbox" class="" id="{{this.item_id}}" name="{{this.item_nome}}" value="{{this.item_val}}"><div style="margin-top: -25px; margin-left: 30px;">{{this.item_val}}</div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
+
+        {{#if this.isNumber}}
+          <div style="width: 50%">
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label>
+                <div>
+                  <input type="{{this.tipo}}" class="w3-input w3-border" id="{{this.id}}" name="{{this.nome}}" placeholder="{{this.dica}}">
+                </div>
+          </div> <!-- End of form-group -->
+        {{/if}}          
+
+        {{#if this.isDate}}
+          <div style="width: 50%">
+            <label for="{{this.id}}" class="control-label"><b>
+                {{this.etiqueta}}:</b></label>
+                <div>
+                  <input type="{{this.tipo}}" class="w3-input w3-border" id="{{this.id}}" name="{{this.nome}}" placeholder="{{this.dica}}">
+                </div>
+          </div> <!-- End of form-group -->
+        {{/if}}          
+
+        {{#if this.isText}}
+
+            {{#if this.isIDField}}
+            <script>
+                function check_id(){
+                    let x = document.forms["formulario_corrente"]["ID"].value;
+                    if (lista_ids_registrados.indexOf(x) !== -1) {
+                        window.alert("Já existe uma mídia registrada com este identificador! Favor utilizar outro.");
+                        document.forms["formulario_corrente"]["ID"].value = "";
+                    }
+                }
+            </script>
+            {{/if}}
+
+            {{#if this.visivel}}
+            <div class="w3-col s4">
+            {{else}}
+            <div hidden>
+            {{/if}}
+                <label for="{{this.id}}" class="control-label"><b>{{this.etiqueta}}:</b>
+                    <input {{#if this.isIDField}}onchange="check_id();"{{/if}} type="{{this.tipo}}" class="w3-input w3-border s3" id="{{this.id}}" name="{{this.nome}}" placeholder="{{this.dica}}"></label>
+            </div> <!-- End of form-group -->
+        {{/if}}
+	{{/each}}
+    </div><br>
+    <div class="w3-center"><button type="submit" class="w3-button w3-black">Registrar</button></div>
+</form>
+</div>

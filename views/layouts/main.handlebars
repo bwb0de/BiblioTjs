@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Organizador de midias físicas e gestor de empréstimos...">
+    <meta name="author" content="Daniel Cruz (@bwb0de)">
+    
+
+    <title>BiblioTjs</title>
+	<link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/simple-sidebar.css" rel="stylesheet">
+    <link href="/css/w3.css" rel="stylesheet">
+    <link href="/css/frontpage.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="toggled">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        <h3 style="margin-top: 20px;">Ações</h3>
+                    </a>
+                </li>
+				
+				{{>bssidebar}}
+				
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+			<div class="header-fix"  style="margin-top: -36px; margin-left: -25px; background-color: black; height: 121.8px;  z-index: 10;">
+				<!-- Title -->
+				<div style='margin-top: 15px; margin-left: 145px; color: white;'>
+					<h1 class="site_title" style="font-size: 4.2em; font-family: 'Segoe Script'">
+					BiblioTKjs</h1></div>
+
+				<!-- Logo -->
+				<div><a href="/" id="menu-toggle">
+					<img
+						style='margin-top: -5.4em;'
+						src="/img/logo.svg"
+						height="140"
+						width="140"></a>
+				</div>
+			</div>			
+			
+            <div class="container-fluid" style='margin-top: 165px;'>
+
+               {{{body}}}
+               
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,95 @@
+{
+	"titulo": "Registro de nova mídia",
+	"descricao": "",
+	"form_ref": "nova_midia/no_id",	
+	"campos": [{
+					"id" : "ID",
+					"visivel" : true,
+					"nome" : "ID",
+					"etiqueta" : "Midia ID",
+					"tipo" : "text",
+					"dica" : "**Opcional**, se não fornecido, será gerado...",
+					"ops" : null
+				},
+				{
+					"id" : "TITULO",
+					"visivel" : true,
+					"nome" : "TITULO",
+					"etiqueta" : "Titulo da mídia",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				},
+				{
+					"id" : "AUTOR",
+					"visivel" : true,
+					"nome" : "AUTOR",
+					"etiqueta" : "Autor",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				},
+				{
+					"id" : "AUTORESP",
+					"visivel" : true,
+					"nome" : "AUTORESP",
+					"etiqueta" : "Autor espiritual",
+					"tipo" : "text",
+					"dica" : "Inserir informações neste campo se for aplicável.",
+					"ops" : null
+				},
+				{
+					"id" : "GN",
+					"visivel" : true,
+					"nome" : "GN",
+					"etiqueta" : "Genero da obra",
+					"tipo" : "text",
+					"dica" : "Drama, romance, comédia...",
+					"ops" : null
+				},
+				{
+					"id" : "EDITORA",
+					"visivel" : true,
+					"nome" : "EDITORA",
+					"etiqueta" : "Editora/Gravadora",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				},
+				{
+					"id" : "EDICAO",
+					"visivel" : true,
+					"nome" : "EDICAO",
+					"etiqueta" : "Edição/Versão",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				},
+				{
+					"id" : "KEYWORD",
+					"visivel" : true,
+					"nome" : "KEYWORD",
+					"etiqueta" : "Palavras-chave",
+					"tipo" : "text",
+					"dica" : "",
+					"ops" : null
+				},
+				{
+					"id" : "MIDIA",
+					"visivel" : true,
+					"nome" : "MIDIA",
+					"etiqueta" : "Tipo de mídia",
+					"tipo" : "radio",
+					"dica" : "",
+					"ops" : ["Livro", "Revista", "Fita VHS", "CD", "CD-ROM", "DVD", "BlueRay"]
+				},
+				{
+					"id" : "RESUMO",
+					"visivel" : true,
+					"nome" : "RESUMO",
+					"etiqueta" : "Resumo/Resenha",
+					"tipo" : "textarea",
+					"dica" : "Apresentar, em linhas gerais, do que trata a obra.",
+					"ops" : null
+				}]
+}

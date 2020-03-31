@@ -1,0 +1,20 @@
+<div style="width: 80%; margin-top: -100px;">
+  <table>
+      <thead style="font-weight: bold;">
+       <tr>
+            <td style="width: 110px">ID</td>
+            <td style="width: 400px">Título {{#if main_list}}<a href="/main_list">🞁</a><a href="/main_list/titulo_reverse">🞃</a>{{/if}}</td>
+            <td>Autor {{#if main_list}}<a href="/main_list/autor">🞁</a><a href="/main_list/autor_reverse">🞃</a>{{/if}}</td>
+            {{#if main_list}}<td>Situação <a href="/main_list/situacao">🞁</a><a href="/main_list/situacao_reverse">🞃</a></td>{{/if}}
+      </tr>
+      </thead>
+  {{#each midias}}
+  <tr>
+      <td>{{this.ID}}</td>
+      <td><a href="/ver_midia/{{this.ID}}">{{this.TITULO}}</a></td>
+      <td>{{this.AUTOR}}</td>
+      <td>{{this.STATUS}}</td>
+  </tr>
+  {{/each}}
+  </table>
+</div> 
